@@ -6,7 +6,8 @@ import * as dice from "../dice.js";
 
 export default class AnimonCharacterSheet extends ActorSheet {
     static get defaultOptions() {
-        return mergeObject(super.defaultOptions, {
+        // UPDATED: Use foundry.utils.mergeObject
+        return foundry.utils.mergeObject(super.defaultOptions, {
             classes: ["animon", "sheet", "actor"],
             tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "info" }]
         })
@@ -60,6 +61,7 @@ export default class AnimonCharacterSheet extends ActorSheet {
         const qualities = [];
         const signatureattacks = [];
 
+        // V13 Safe Iteration over items
         for (let i of sheetData.items) {
             i.img = i.img;
             if (i.type === "quality") {
@@ -701,9 +703,8 @@ export default class AnimonCharacterSheet extends ActorSheet {
 
     }
 
-    /**    
-     *      Helper Function for _onDropItem.
-     *      Return true if the dropped itemDataType is a drag and droppable item and is valid for the actorType, else return false
+    /** * Helper Function for _onDropItem.
+     * Return true if the dropped itemDataType is a drag and droppable item and is valid for the actorType, else return false
      **/
     isValidDropItem(actorType, itemDataType) {
 

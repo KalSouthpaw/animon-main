@@ -17,7 +17,7 @@ export async function StatCheck(stat, die, actor) {
                 dice = dice + parseInt(actor.talent[i].system.rank);
                 itemId = actor.talent[i]._id
                 item = actor.items.get(itemId);
-                item.update({ "system.selected": false });
+                await item.update({ "system.selected": false });
             };
         }
     }
@@ -29,7 +29,7 @@ export async function StatCheck(stat, die, actor) {
                 dice = dice + parseInt(actor.quality[i].system.rank);
                 itemId = actor.quality[i]._id
                 item = actor.items.get(itemId);
-                item.update({ "system.selected": false });
+                await item.update({ "system.selected": false });
             };
         }
         for (let i = 0; i < actor.signatureAttack.length; i++) {
@@ -38,8 +38,8 @@ export async function StatCheck(stat, die, actor) {
                 dice = dice + parseInt(actor.signatureAttack[i].system.rank);
                 itemId = actor.signatureAttack[i]._id
                 item = actor.items.get(itemId);
-                item.update({ "system.selected": false });
-                actor.update({ "system.sigUses.value": sigUses })
+                await item.update({ "system.selected": false });
+                await actor.update({ "system.sigUses.value": sigUses })
             };
         }
     }
@@ -50,9 +50,9 @@ export async function StatCheck(stat, die, actor) {
         speaker: ChatMessage.getSpeaker()
     }
 
-    let rollResult = new Roll(rollFormula).roll({ async: false })
+    // UPDATED FOR V13: Rolls must be evaluated asynchronously
+    let rollResult = await new Roll(rollFormula).evaluate();
     rollResult.toMessage(messageData)
-
 }
 
 async function GetStatCheckOptions(stat) {

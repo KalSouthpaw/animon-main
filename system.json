@@ -1,17 +1,17 @@
 {
-    "name": "animon",
-    "title": "Aminon Story (Unofficial)",
-    "description": "A system for playing Aminon Story",
+    "name": "animon-main",
+    "title": "Animon Story (Unofficial)",
+    "description": "A system for playing Animon Story",
     "authors": [
         {
-            "name": "RabidRaccoon"
+            "name": "KalSouthpaw"
         }
     ],
-    "version": "0.0.1",
+    "version": "0.0.2",
     "compatibility": {
-        "minimum": "11",
-        "verified": "11",
-        "maximum": "11"
+        "minimum": "13",
+        "verified": "13.351",
+        "maximum": "13"
     },
     "esmodules": [
         "animon.js"
@@ -30,7 +30,7 @@
     "gridUnits": "ft",
     "primaryTokenAttribute": "wounds",
     "initiative": "(@basic.initiative)d6cs>=4",
-    "url": "https://gitlab.com/RabidRaccoon/animon",
-    "manifest": "https://gitlab.com/RabidRaccoon/animon/-/raw/main/system.json",
-    "download": "https://gitlab.com/RabidRaccoon/animon/-/archive/v0.0.1/animon-v0.0.1.zip"
+    "url": "https://github.com/KalSouthpaw/animon-main",
+    "manifest": "https://raw.githubusercontent.com/KalSouthpaw/animon-main/refs/heads/main/system.json",
+    "download": "https://github.com/KalSouthpaw/animon-main/archive/refs/heads/main.zip"
 }

@@ -5,7 +5,8 @@
 export default class AnimonItemSheet extends ItemSheet {
 
     static get defaultOptions() {
-        return mergeObject(super.defaultOptions, {
+        // UPDATED: Use foundry.utils.mergeObject
+        return foundry.utils.mergeObject(super.defaultOptions, {
             classes: ["animon", "sheet", "item"]
         })
     }
