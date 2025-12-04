@@ -1,0 +1,7 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="mod-title sheet-header">
+        <h3 class="box-border"><input name="name" type="text" value="{{item.name}}"
+                placeholder="{{ localize 'Name' }}" /></h3>
+    </header>
+    {{editor enrichedDescription target="system.description" button=true editable=editable}}
+</form>

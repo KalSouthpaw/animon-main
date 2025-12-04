@@ -1,0 +1,107 @@
+{
+    "ACTOR.TypeChild": "Child",
+    "ACTOR.TypeAnimon": "Animon",
+    "ITEM.TypeTalent": "Talent",
+    "ITEM.TypeRelationship": "Relationship",
+    "ITEM.TypeQuality": "Quality",
+    "ITEM.TypeSignatureattack": "Signature Attack",
+    "animon": {
+        "tabs": {
+            "animon": "Animon",
+            "stages": "Stages",
+            "scoreImprovement": "Score Improvement"
+        },
+        "animon": {
+            "currentStage": "Current Stage",
+            "stats": "STATS",
+            "heart": "HEART",
+            "power": "POWER",
+            "agility": "AGILITY",
+            "brains": "BRAINS",
+            "hp": "HP",
+            "damage": "DAMAGE",
+            "dodge": "DODGE",
+            "initiative": "INITIATIVE",
+            "nature": "Nature",
+            "classification": "Class",
+            "element": "Element",
+            "quality": "Quality",
+            "stage": "Stage",
+            "stages": {
+                "fledgling": "FLEDGLING",
+                "basic": "BASIC",
+                "super": "SUPER",
+                "ultra": "ULTRA",
+                "giga": "GIGA"
+            },
+            "signatureAttack": "Signature Attack",
+            "name": "Name",
+            "rank": "Rank",
+            "effect": "Effect",
+            "maxHP": "Maximum HP",
+            "sigUses": "Sig. Attack Uses"
+        },
+        "child": {
+            "kid": "KID",
+            "kidName": "Kid Name",
+            "virtue": "Virtue",
+            "flaw": "Flaw",
+            "desire": "Desire",
+            "specialItem": "Special Item",
+            "traits": "TRAITS",
+            "logic": "Logic",
+            "reflex": "Reflex",
+            "spirit": "Spirit",
+            "kidType": "Kid Type",
+            "stamina": "STAMINA",
+            "talent": "Talent",
+            "rank": "Rank",
+            "harm": "Harm",
+            "shaken": "Shaken",
+            "stuff": "Stuff & Ani-Tool",
+            "relationships": "Relationships",
+            "bond": "Bond",
+            "points": "Points",
+            "strain": "Strain",
+            "level": "Level",
+            "xp": "XP"
+        },
+        "button": {
+            "rollHeart": "Roll Heart",
+            "rollPower": "Roll Power",
+            "rollAgility": "Roll Agility",
+            "rollBrains": "Roll Brains",
+            "rollDodge": "Roll Dodge",
+            "rollInitiative": "Roll Initiative",
+            "editTalent": "Edit Talent",
+            "deleteTalent": "Delete Talent",
+            "editRelationship": "Edit Relationship",
+            "deleteRelationship": "Delete Relationship",
+            "editQuality": "Edit Quality",
+            "deleteQuality": "Delete Quality",
+            "editSignatureAttack": "Edit Signature Attack",
+            "deleteSignatureAttack": "Delete Signature Attack",
+            "addQuality": "Add New Quality",
+            "addSignatureAttack": "Add New Signature Attack",
+            "addTalent": "Add New Talent",
+            "addRelationship": "Add New Relationship"
+        },
+        "chat": {
+            "roll": "Roll",
+            "cancel": "Cancel",
+            "title": "{type} Roll",
+            "statCheck": {
+                "boostsetback": "Boost/Setback",
+                "extraDice": "Extra Dice",
+                "dSetback": "Double Setback",
+                "setback": "Setback",
+                "none": "None",
+                "boost": "Boost",
+                "dBoost": "Double Boost"
+            }
+        },
+        "sheet": {
+            "newItem": "N/A"
+        }
+    }
+}

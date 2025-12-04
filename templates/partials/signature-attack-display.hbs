@@ -1,0 +1,53 @@
+{{#each actor.signatureAttack as |signatureAttack id|}}
+{{#if (lte signatureAttack.system.stage ../currentStage)}}
+{{#if (eq signatureAttack.system.stage ../stage)}}
+<div class="signatureAttack-item" data-item-id="{{signatureAttack._id}}">
+    <a class=" add-signature-attack {{#if (eq signatureAttack.system.selected true)}}signatureAttack-selected{{/if}}"
+        data-type="signatureAttack">
+        <div class="signature-attack-border">
+            <div class="sainput sa-border">
+                <h4>{{localize "animon.animon.name"}}:</h4>
+                {{signatureAttack.name}}
+            </div>
+            <div class="sa-rank-element sa-border">
+                <div class="sainput">
+                    <h4>{{localize "animon.animon.rank"}}:</h4>
+                    {{signatureAttack.system.rank}}
+                </div>
+                <div class="sainput">
+                    <h4>{{localize "animon.animon.element"}}:</h4>
+                    {{signatureAttack.system.element}}
+                </div>
+            </div>
+            {{#if (ne signatureAttack.system.effect1 "")}}
+            <div class="sainput sa-border">
+                <h4>{{localize "animon.animon.effect"}} 1:</h4>
+                {{signatureAttack.system.effect1}}
+            </div>
+            {{/if}}
+            {{#if (ne signatureAttack.system.effect2 "")}}
+            <div class="sainput sa-border">
+                <h4>{{localize "animon.animon.effect"}} 2:</h4>
+                {{signatureAttack.system.effect2}}
+            </div>
+            {{/if}}
+            {{#if (ne signatureAttack.system.effect3 "")}}
+            <div class="sainput sa-border">
+                <h4>{{localize "animon.animon.effect"}} 3:</h4>
+                {{signatureAttack.system.effect3}}
+            </div>
+            {{/if}}
+        </div>
+    </a>
+    <div class="signatureAttack-item-buttons">
+        <a title='{{localize "animon.button.editSignatureAttack" }}' class="item-edit" data-type="signatureAttack">
+            <i class="fas fa-edit"></i>
+        </a>
+        <a title='{{localize "animon.button.deleteSignatureAttack" }}' class="item-delete" data-type="signatureAttack">
+            <i class="fas fa-trash"></i>
+        </a>
+    </div>
+</div>
+{{/if}}
+{{/if}}
+{{/each}}

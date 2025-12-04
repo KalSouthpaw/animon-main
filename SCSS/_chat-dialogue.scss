@@ -1,0 +1,19 @@
+.animon.chat {
+    .roll-dialogue {
+        margin-bottom: 10px;
+
+        .roll-dialogue-child {
+            margin: 4px 0;
+            display: grid;
+            grid-template-columns: 100px auto;
+
+            select {
+                width: fit-content;
+            }
+
+            label {
+                margin: auto 0;
+            }
+        }
+    }
+}

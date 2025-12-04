@@ -1,0 +1,43 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <div class="signatureAttack-item">
+        <div class="signature-attack-border">
+            <div class="sainput sa-border">
+                <h4>{{localize "animon.animon.name"}}:</h4>
+                <input type="text" name="name" value="{{item.name}}">
+            </div>
+            <div class="sainput sa-border">
+                <h4>{{localize "animon.animon.stage"}}:</h4>
+                <select name="system.stage">
+                    {{#select item.system.stage}}
+                    <option value="2">{{localize "animon.animon.stages.basic"}}</option>
+                    <option value="3">{{localize "animon.animon.stages.super"}}</option>
+                    <option value="4">{{localize "animon.animon.stages.ultra"}}</option>
+                    <option value="5">{{localize "animon.animon.stages.giga"}}</option>
+                    {{/select}}
+                </select>
+            </div>
+            <div class="sa-rank-element sa-border">
+                <div class="sainput">
+                    <h4>{{localize "animon.animon.rank"}}:</h4>
+                    <input type="text" name="system.rank" value="{{item.system.rank}}">
+                </div>
+                <div class="sainput">
+                    <h4>{{localize "animon.animon.element"}}:</h4>
+                    <input type="text" name="system.element" value="{{item.system.element}}">
+                </div>
+            </div>
+            <div class="sainput sa-border">
+                <h4>{{localize "animon.animon.effect"}} 1:</h4>
+                <input type="text" name="system.effect1" value="{{item.system.effect1}}">
+            </div>
+            <div class="sainput sa-border">
+                <h4>{{localize "animon.animon.effect"}} 2:</h4>
+                <input type="text" name="system.effect2" value="{{item.system.effect2}}">
+            </div>
+            <div class="sainput sa-border">
+                <h4>{{localize "animon.animon.effect"}} 3:</h4>
+                <input type="text" name="system.effect3" value="{{item.system.effect3}}">
+            </div>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,188 @@
+{
+    "Actor": {
+        "types": [
+            "child",
+            "animon"
+        ],
+        "child": {
+            "type": "",
+            "trait": {
+                "logic": 0,
+                "reflex": 0,
+                "spirit": 0
+            },
+            "wounds": {
+                "value": 10,
+                "max": 10
+            },
+            "specialItem": "",
+            "flaw": "",
+            "desire": "",
+            "stuff": "",
+            "harm": {
+                "first": "",
+                "second": "",
+                "third": ""
+            },
+            "shaken": false,
+            "bondLevel": 1,
+            "bondPoints": {
+                "value": 6,
+                "max": 6
+            },
+            "bondStrain": 0,
+            "kidType": "",
+            "typeFeature": "",
+            "xp": 0
+        },
+        "animon": {
+            "stage": "2",
+            "nature": "",
+            "wounds": {
+                "value": 0,
+                "max": 0
+            },
+            "initiative": 0,
+            "sigUses": {
+                "value": 0,
+                "max": 0
+            },
+            "advancement": {
+                "maxHP1": false,
+                "maxHP2": false,
+                "damage1": false,
+                "damage2": false,
+                "dodge1": false,
+                "dodge2": false,
+                "initiative1": false,
+                "initiative2": false
+            },
+            "fledgling": {
+                "name": "Fledgling",
+                "stats": {
+                    "heart": 0,
+                    "power": 0,
+                    "agility": 0,
+                    "brains": 0
+                },
+                "wounds": {
+                    "max": 0
+                },
+                "damage": 0,
+                "dodge": 0,
+                "initiative": 0,
+                "classification": "",
+                "element": ""
+            },
+            "basic": {
+                "name": "Basic",
+                "stats": {
+                    "heart": 0,
+                    "power": 0,
+                    "agility": 0,
+                    "brains": 0
+                },
+                "wounds": {
+                    "max": 0
+                },
+                "sigUses": {
+                    "max": 0
+                },
+                "damage": 0,
+                "dodge": 0,
+                "initiative": 0,
+                "classification": "",
+                "element": ""
+            },
+            "super": {
+                "name": "Super",
+                "stats": {
+                    "heart": 0,
+                    "power": 0,
+                    "agility": 0,
+                    "brains": 0
+                },
+                "wounds": {
+                    "max": 0
+                },
+                "sigUses": {
+                    "max": 0
+                },
+                "damage": 0,
+                "dodge": 0,
+                "initiative": 0,
+                "classification": "",
+                "element": ""
+            },
+            "ultra": {
+                "name": "Ultra",
+                "stats": {
+                    "heart": 0,
+                    "power": 0,
+                    "agility": 0,
+                    "brains": 0
+                },
+                "wounds": {
+                    "max": 0
+                },
+                "sigUses": {
+                    "max": 0
+                },
+                "damage": 0,
+                "dodge": 0,
+                "initiative": 0,
+                "classification": "",
+                "element": ""
+            },
+            "giga": {
+                "name": "Giga",
+                "stats": {
+                    "heart": 0,
+                    "power": 0,
+                    "agility": 0,
+                    "brains": 0
+                },
+                "wounds": {
+                    "max": 0
+                },
+                "sigUses": {
+                    "max": 0
+                },
+                "damage": 0,
+                "dodge": 0,
+                "initiative": 0,
+                "classification": "",
+                "element": ""
+            }
+        }
+    },
+    "Item": {
+        "types": [
+            "talent",
+            "relationship",
+            "quality",
+            "signatureAttack"
+        ],
+        "quality": {
+            "rank": 1,
+            "selected": false,
+            "stage": "2"
+        },
+        "talent": {
+            "rank": 1,
+            "selected": false
+        },
+        "signatureAttack": {
+            "rank": 1,
+            "selected": false,
+            "stage": "2",
+            "element": "",
+            "effect1": "",
+            "effect2": "",
+            "effect3": ""
+        },
+        "relationship": {
+            "description": ""
+        }
+    }
+}

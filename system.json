@@ -1,0 +1,36 @@
+{
+    "name": "animon",
+    "title": "Aminon Story (Unofficial)",
+    "description": "A system for playing Aminon Story",
+    "authors": [
+        {
+            "name": "RabidRaccoon"
+        }
+    ],
+    "version": "0.0.1",
+    "compatibility": {
+        "minimum": "11",
+        "verified": "11",
+        "maximum": "11"
+    },
+    "esmodules": [
+        "animon.js"
+    ],
+    "styles": [
+        "dist/animon.css"
+    ],
+    "languages": [
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "lang/en.json"
+        }
+    ],
+    "gridDistance": 5,
+    "gridUnits": "ft",
+    "primaryTokenAttribute": "wounds",
+    "initiative": "(@basic.initiative)d6cs>=4",
+    "url": "https://gitlab.com/RabidRaccoon/animon",
+    "manifest": "https://gitlab.com/RabidRaccoon/animon/-/raw/main/system.json",
+    "download": "https://gitlab.com/RabidRaccoon/animon/-/archive/v0.0.1/animon-v0.0.1.zip"
+}

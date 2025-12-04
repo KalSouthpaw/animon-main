@@ -1,0 +1,26 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <div class="quality-item">
+        <div class="quality-border">
+            <div class="qinput q-border">
+                <h4>{{localize "animon.animon.quality"}}:</h4>
+                <input type="text" name="name" value="{{item.name}}">
+            </div>
+            <div class="qinput q-border">
+                <h4>{{localize "animon.animon.rank"}}:</h4>
+                <input type="number" name="system.rank" value="{{item.system.rank}}">
+            </div>
+            <div class="qinput q-border">
+                <h4>{{localize "animon.animon.stage"}}:</h4>
+                <select name="system.stage">
+                    {{#select item.system.stage}}
+                    <option value="2">{{localize "animon.animon.stages.basic"}}</option>
+                    <option value="3">{{localize "animon.animon.stages.super"}}</option>
+                    <option value="4">{{localize "animon.animon.stages.ultra"}}</option>
+                    <option value="5">{{localize "animon.animon.stages.giga"}}</option>
+                    {{/select}}
+                </select>
+            </div>
+        </div>
+    </div>
+
+</form>

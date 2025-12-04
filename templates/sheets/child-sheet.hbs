@@ -1,0 +1,198 @@
+{{!-- Sheet for displaying Animon --}}
+
+<form class="{{cssClass}}" autocomplete="off">
+    <div class="stage-box-border">
+        <div class="kid-top">
+            <div class="item-box-border kid-title">
+                <h3>{{localize "animon.child.kid"}}</h3>
+            </div>
+            <div class="item-box-border">
+                <div class="kid-name">
+                    <h3>{{localize "animon.child.kidName"}}:</h3>
+                    <input type="text" name="name" value="{{actor.name}}">
+                </div>
+                <div class="virtue-flaw">
+                    <div class="virtue">
+                        <h3>{{localize "animon.child.virtue"}}:</h3>
+                        <input type="text" name="system.virtue" value="{{actor.system.virtue}}">
+                    </div>
+                    <div class="flaw">
+                        <h3>{{localize "animon.child.flaw"}}:</h3>
+                        <input type="text" name="system.flaw" value="{{actor.system.flaw}}">
+                    </div>
+                </div>
+                <div class="desire-special">
+                    <div class="desire">
+                        <h3>{{localize "animon.child.desire"}}:</h3>
+                        <input type="text" name="system.desire" value="{{actor.system.desire}}">
+                    </div>
+                    <div class="special-item">
+                        <h3>{{localize "animon.child.specialItem"}}:</h3>
+                        <input type="text" name="system.specialItem" value="{{actor.system.specialItem}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="kid-sheet">
+            <div>
+                <div class="item-box-border child-traits">
+                    <h3>{{localize "animon.child.traits"}}</h3>
+                    <div class="child-stats">
+                        <div class="child-logic">
+                            <div class="child-logic-title">
+                                <h4>{{localize "animon.child.logic"}}</h4>
+                                <a title='{{localize "animon.child.logic"}}' class="roll-stat"
+                                    data-stat="{{localize 'animon.child.logic'}}"
+                                    data-value="{{actor.system.trait.logic}}">
+                                    <i class="fas fa-dice"></i>
+                                </a>
+                            </div>
+                            <input type="number" name="system.trait.logic" value="{{actor.system.trait.logic}}">
+                        </div>
+                        <div class="child-reflex">
+                            <div class="child-logic-title">
+                                <h4>{{localize "animon.child.reflex"}}</h4>
+                                <a title='{{localize "animon.child.reflex"}}' class="roll-stat"
+                                    data-stat="{{localize 'animon.child.reflex'}}"
+                                    data-value="{{actor.system.trait.reflex}}">
+                                    <i class="fas fa-dice"></i>
+                                </a>
+                            </div>
+                            <input type="number" name="system.trait.reflex" value="{{actor.system.trait.reflex}}">
+                        </div>
+                        <div class="child-spirit">
+                            <div class="child-logic-title">
+                                <h4>{{localize "animon.child.spirit"}}</h4>
+                                <a title='{{localize "animon.child.spirit"}}' class="roll-stat"
+                                    data-stat="{{localize 'animon.child.spirit'}}"
+                                    data-value="{{actor.system.trait.spirit}}">
+                                    <i class="fas fa-dice"></i>
+                                </a>
+                            </div>
+                            <input type="number" name="system.trait.spirit" value="{{actor.system.trait.spirit}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="item-box-border stamina">
+                    <h4>{{localize "animon.child.stamina"}}</h4>
+                    <input style="margin-left:auto" type="number" name="system.wounds.value"
+                        value="{{actor.system.wounds.value}}">
+                    <div class="stamina-line"></div>
+                    <input type="number" name="system.wounds.max" value="{{actor.system.wounds.max}}">
+                </div>
+                <div class="item-box-border harm">
+                    <div class="harm-title">
+                        <h4>{{localize "animon.child.harm"}}:</h4>
+                        <h4>{{localize "animon.child.shaken"}}</h4>
+                        <input type="checkbox" name="system.shaken" {{checked actor.system.shaken}}
+                            data-dtype="boolean" />
+                    </div>
+                    <div class="harm-input">
+                        <h4>1.</h4>
+                        <input type="text" name="system.harm.first" value="{{actor.system.harm.first}}">
+                    </div>
+                    <div class="harm-input">
+                        <h4>2.</h4>
+                        <input type="text" name="system.harm.second" value="{{actor.system.harm.second}}">
+                    </div>
+                    <div class="harm-input">
+                        <h4>3.</h4>
+                        <input type="text" name="system.harm.third" value="{{actor.system.harm.third}}">
+                    </div>
+                </div>
+                {{> "systems/animon/templates/partials/relationship-display.hbs"}}
+            </div>
+            <div>
+                <div class="item-box-border">
+                    <div class="kid-type">
+                        <h4>{{localize "animon.child.kidType"}}:</h4>
+                        <input type="text" name="system.kidType" value="{{actor.system.kidType}}">
+                    </div>
+                    {{editor enrichedTypeFeature target="system.typeFeature" button=true editable=editable}}
+                </div>
+                <div class="item-box-border">
+                    <div class="talent-main-title">
+                        <h4>{{localize "animon.child.talent"}}</h4>
+                        <h4>{{localize "animon.child.rank"}}</h4>
+                        <a title='{{localize "animon.button.addTalent"}}' class="item-create" data-type="talent"
+                            data-stage="1">
+                            <i class="fas fa-plus"></i>
+                        </a>
+                    </div>
+                    <div class="child-talents-list">
+                        {{#each actor.talent as |talent id|}}
+                        <div class="talent-item" data-item-id="{{talent._id}}">
+                            <a class="talent-item-display add-talent {{#if (eq talent.system.selected true)}}talent-selected{{/if}}"
+                                data-type="talent">
+                                <div>{{name}}</div>
+                                <div>{{system.rank}}</div>
+                            </a>
+                            <div class="talent-item-buttons">
+                                <a title='{{localize "animon.button.editTalent" }}' class="item-edit"
+                                    data-type="talent">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <a title='{{localize "animon.button.deleteTalent" }}' class="item-delete"
+                                    data-type="talent">
+                                    <i class="fas fa-trash"></i>
+                                </a>
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
+                <div class="item-box-border">
+                    <div class="kid-stuff">
+                        <h4>{{localize "animon.child.stuff"}}:</h4>
+                    </div>
+                    {{editor enrichedStuff target="system.stuff" button=true editable=editable}}
+                </div>
+                <div class="xp-bond-level">
+                    <div class="item-box-border xp">
+                        <h4>{{localize "animon.child.xp"}}</h4>
+                        <div class="xp-points">
+                            {{#multiple 10}}
+                            <div class="set-xp" data-num="{{@index}}">
+                                <svg height="20" width="20" class={{#if (gte ../actor.system.xp
+                                    @index)}}"xp-selected"{{else}}"xp-unselected"{{/if}}>
+                                    <circle cx="10" cy="10" r="8" />
+                                </svg>
+                            </div>
+                            {{/multiple}}
+                        </div>
+
+                    </div>
+                    <div class="item-box-border bond-level">
+                        <div>
+                            <h4>{{localize "animon.child.bond"}}</h4>
+                            <h4>{{localize "animon.child.level"}}</h4>
+                        </div>
+                        <input class="update-bond-level" type="number" name="system.bondLevel"
+                            value="{{actor.system.bondLevel}}">
+                    </div>
+                </div>
+                <div class="bond">
+                    <div class="item-box-border bond-points">
+                        <div>
+                            <h4>{{localize "animon.child.bond"}}</h4>
+                            <h4>{{localize "animon.child.points"}}</h4>
+                        </div>
+                        <input type="number" name="system.bondPoints.value" value="{{actor.system.bondPoints.value}}">
+                        <div class="bond-points-line"></div>
+                        <input type="number" name="system.bondPoints.max" value="{{actor.system.bondPoints.max}}">
+                    </div>
+                    <div class="item-box-border bond-strain">
+                        <div>
+                            <h4>{{localize "animon.child.bond"}}</h4>
+                            <h4>{{localize "animon.child.strain"}}</h4>
+                        </div>
+                        <input type="number" name="system.bondStrain" value="{{actor.system.bondStrain}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</form>

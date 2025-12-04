@@ -1,0 +1,21 @@
+{{#each actor.quality as |quality id|}}
+{{#if (lte quality.system.stage ../currentStage)}}
+{{#if (eq quality.system.stage ../stage)}}
+<div class="quality-item" data-item-id="{{quality._id}}">
+    <a class="quality-item-display add-quality {{#if (eq quality.system.selected true)}}quality-selected{{/if}}"
+        data-type="quality">
+        <div>{{name}}</div>
+        <div>{{system.rank}}</div>
+    </a>
+    <div class="quality-item-buttons">
+        <a title='{{localize "animon.button.editQuality" }}' class="item-edit" data-type="quality">
+            <i class="fas fa-edit"></i>
+        </a>
+        <a title='{{localize "animon.button.deleteQuality" }}' class="item-delete" data-type="quality">
+            <i class="fas fa-trash"></i>
+        </a>
+    </div>
+</div>
+{{/if}}
+{{/if}}
+{{/each}}

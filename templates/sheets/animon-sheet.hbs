@@ -1,0 +1,823 @@
+{{!-- Sheet for displaying Animon --}}
+
+<form class="{{cssClass}}" autocomplete="off">
+    <nav class="sheet-tabs tabs title-box-border" data-group="primary">
+        <a class="item" data-tab="animon">{{localize "animon.tabs.animon"}}</a>
+        <a class="item" data-tab="stages">{{localize "animon.tabs.stages"}}</a>
+        <a class="item" data-tab="advancement">{{localize "animon.tabs.scoreImprovement"}}</a>
+    </nav>
+    <section class="sheet-body">
+        {{!-- Hero Tab Content --}}
+        <div class="tab animon" data-group="primary" data-tab="animon">
+            <div class="stage-box-border">
+                <div class="item-box-border animon-current-stage">
+                    <h3>{{localize "animon.animon.currentStage"}}:</h3>
+                    <select class="stage-change" name="system.stage">
+                        {{#select actor.system.stage}}
+                        <option value="1">{{localize "animon.animon.stages.fledgling"}}</option>
+                        <option value="2">{{localize "animon.animon.stages.basic"}}</option>
+                        <option value="3">{{localize "animon.animon.stages.super"}}</option>
+                        <option value="4">{{localize "animon.animon.stages.ultra"}}</option>
+                        <option value="5">{{localize "animon.animon.stages.giga"}}</option>
+                        {{/select}}
+                    </select>
+                </div>
+                <div class="animon-info">
+                    <div>
+                        <div class="item-box-border animon-stage-name">
+                            <h3>{{localize "animon.animon.name"}}:</h3>
+                            {{#if (eq actor.system.stage "2")}}
+                            <p>{{actor.system.basic.name}}</p>
+                            {{/if}}
+                            {{#if (eq actor.system.stage "1")}}
+                            <p>{{actor.system.fledgling.name}}</p>
+                            {{/if}}
+                            {{#if (eq actor.system.stage "3")}}
+                            <p>{{actor.system.super.name}}</p>
+                            {{/if}}
+                            {{#if (eq actor.system.stage "4")}}
+                            <p>{{actor.system.ultra.name}}</p>
+                            {{/if}}
+                            {{#if (eq actor.system.stage "5")}}
+                            <p>{{actor.system.giga.name}}</p>
+                            {{/if}}
+                        </div>
+                        <div class="animon-info-stats">
+                            <div>
+                                <div class="item-box-border animon-stats text-centered">
+                                    <h3 class="title">{{localize "animon.animon.stats"}}</h3>
+                                    <div class="animon-heart">
+                                        <div class="animon-heart-title">
+                                            <h4>{{localize "animon.animon.heart"}}</h4>
+                                            <a title='{{localize "animon.button.rollHeart"}}' class="roll-stat"
+                                                data-stat="{{localize 'animon.animon.heart'}}" {{#if (eq
+                                                actor.system.stage "2"
+                                                )}}data-value="{{actor.system.basic.stats.heart}}" {{/if}} {{#if (eq
+                                                actor.system.stage "1"
+                                                )}}data-value="{{actor.system.fledgling.stats.heart}}" {{/if}} {{#if (eq
+                                                actor.system.stage "3"
+                                                )}}data-value="{{actor.system.super.stats.heart}}" {{/if}} {{#if (eq
+                                                actor.system.stage "4"
+                                                )}}data-value="{{actor.system.ultra.stats.heart}}" {{/if}} {{#if (eq
+                                                actor.system.stage "5" )}}data-value="{{actor.system.giga.stats.heart}}"
+                                                {{/if}}>
+                                                <i class="fas fa-dice"></i>
+                                            </a>
+                                        </div>
+
+                                        {{#if (eq actor.system.stage "2")}}
+                                        {{actor.system.basic.stats.heart}}
+                                        {{/if}}
+                                        {{#if (eq actor.system.stage "1")}}
+                                        {{actor.system.fledgling.stats.heart}}
+                                        {{/if}}
+                                        {{#if (eq actor.system.stage "3")}}
+                                        {{actor.system.super.stats.heart}}
+                                        {{/if}}
+                                        {{#if (eq actor.system.stage "4")}}
+                                        {{actor.system.ultra.stats.heart}}
+                                        {{/if}}
+                                        {{#if (eq actor.system.stage "5")}}
+                                        {{actor.system.giga.stats.heart}}
+                                        {{/if}}
+                                    </div>
+
+                                    <div class="animon-power">
+                                        <div class="animon-power-title">
+                                            <h4>{{localize "animon.animon.power"}}</h4>
+                                            <a title='{{localize "animon.button.rollPower"}}' class="roll-stat"
+                                                data-stat='{{localize "animon.animon.power"}}' {{#if (eq
+                                                actor.system.stage "2"
+                                                )}}data-value="{{actor.system.basic.stats.power}}" {{/if}} {{#if (eq
+                                                actor.system.stage "1"
+                                                )}}data-value="{{actor.system.fledgling.stats.power}}" {{/if}} {{#if (eq
+                                                actor.system.stage "3"
+                                                )}}data-value="{{actor.system.super.stats.power}}" {{/if}} {{#if (eq
+                                                actor.system.stage "4"
+                                                )}}data-value="{{actor.system.ultra.stats.power}}" {{/if}} {{#if (eq
+                                                actor.system.stage "5" )}}data-value="{{actor.system.giga.stats.power}}"
+                                                {{/if}}>
+                                                <i class="fas fa-dice"></i>
+                                            </a>
+                                        </div>
+                                        {{#if (eq actor.system.stage "2")}}
+                                        {{actor.system.basic.stats.power}}
+                                        {{/if}}
+                                        {{#if (eq actor.system.stage "1")}}
+                                        {{actor.system.fledgling.stats.power}}
+                                        {{/if}}
+                                        {{#if (eq actor.system.stage "3")}}
+                                        {{actor.system.super.stats.power}}
+                                        {{/if}}
+                                        {{#if (eq actor.system.stage "4")}}
+                                        {{actor.system.ultra.stats.power}}
+                                        {{/if}}
+                                        {{#if (eq actor.system.stage "5")}}
+                                        {{actor.system.giga.stats.power}}
+                                        {{/if}}
+                                    </div>
+
+                                    <div class="animon-agility">
+                                        <div class="animon-agility-title">
+                                            <h4>{{localize "animon.animon.agility"}}</h4>
+                                            <a title='{{localize "animon.button.rollAgility"}}' class="roll-stat"
+                                                data-stat='{{localize "animon.animon.agility"}}' {{#if (eq
+                                                actor.system.stage "2" )}}
+                                                data-value="{{actor.system.basic.stats.agility}}" {{/if}} {{#if (eq
+                                                actor.system.stage "1" )}}
+                                                data-value="{{actor.system.fledgling.stats.agility}}" {{/if}} {{#if (eq
+                                                actor.system.stage "3" )}}
+                                                data-value="{{actor.system.super.stats.agility}}" {{/if}} {{#if (eq
+                                                actor.system.stage "4" )}}
+                                                data-value="{{actor.system.ultra.stats.agility}}" {{/if}} {{#if (eq
+                                                actor.system.stage "5" )}}
+                                                data-value="{{actor.system.giga.stats.agility}}" {{/if}}>
+                                                <i class="fas fa-dice"></i>
+                                            </a>
+                                        </div>
+                                        {{#if (eq actor.system.stage "2")}}
+                                        {{actor.system.basic.stats.agility}}
+                                        {{/if}}
+                                        {{#if (eq actor.system.stage "1")}}
+                                        {{actor.system.fledgling.stats.agility}}
+                                        {{/if}}
+                                        {{#if (eq actor.system.stage "3")}}
+                                        {{actor.system.super.stats.agility}}
+                                        {{/if}}
+                                        {{#if (eq actor.system.stage "4")}}
+                                        {{actor.system.ultra.stats.agility}}
+                                        {{/if}}
+                                        {{#if (eq actor.system.stage "5")}}
+                                        {{actor.system.giga.stats.agility}}
+                                        {{/if}}
+                                    </div>
+
+                                    <div class="animon-brains">
+                                        <div class="animon-brains-title">
+                                            <h4>{{localize "animon.animon.brains"}}</h4>
+                                            <a title='{{localize "animon.button.rollBrains"}}' class="roll-stat"
+                                                data-stat='{{localize "animon.animon.brains"}}' {{#if (eq
+                                                actor.system.stage "2"
+                                                )}}data-value="{{actor.system.basic.stats.brains}}" {{/if}} {{#if (eq
+                                                actor.system.stage "1"
+                                                )}}data-value="{{actor.system.fledgling.stats.brains}}" {{/if}} {{#if
+                                                (eq actor.system.stage "3"
+                                                )}}data-value="{{actor.system.super.stats.brains}}" {{/if}} {{#if (eq
+                                                actor.system.stage "4"
+                                                )}}data-value="{{actor.system.ultra.stats.brains}}" {{/if}} {{#if (eq
+                                                actor.system.stage "5"
+                                                )}}data-value="{{actor.system.giga.stats.brains}}" {{/if}}>
+                                                <i class="fas fa-dice"></i>
+                                            </a>
+                                        </div>
+                                        {{#if (eq actor.system.stage "2")}}
+                                        {{actor.system.basic.stats.brains}}
+                                        {{/if}}
+                                        {{#if (eq actor.system.stage "1")}}
+                                        {{actor.system.fledgling.stats.brains}}
+                                        {{/if}}
+                                        {{#if (eq actor.system.stage "3")}}
+                                        {{actor.system.super.stats.brains}}
+                                        {{/if}}
+                                        {{#if (eq actor.system.stage "4")}}
+                                        {{actor.system.ultra.stats.brains}}
+                                        {{/if}}
+                                        {{#if (eq actor.system.stage "5")}}
+                                        {{actor.system.giga.stats.brains}}
+                                        {{/if}}
+                                    </div>
+                                </div>
+                                <div class="item-box-border animon-hit-points">
+                                    <h4 class="title">{{localize "animon.animon.sigUses"}}</h4>
+                                    {{#unless (eq actor.system.stage "1")}}
+                                    <input class="update-sig-uses" type="number" name="system.sigUses.value"
+                                        value="{{actor.system.sigUses.value}}">
+                                    <br>
+                                    {{#if (eq actor.system.stage "2")}}
+                                    {{actor.system.basic.sigUses.max}}
+                                    {{/if}}
+                                    {{#if (eq actor.system.stage "3")}}
+                                    {{actor.system.super.sigUses.max}}
+                                    {{/if}}
+                                    {{#if (eq actor.system.stage "4")}}
+                                    {{actor.system.ultra.sigUses.max}}
+                                    {{/if}}
+                                    {{#if (eq actor.system.stage "5")}}
+                                    {{actor.system.giga.sigUses.max}}
+                                    {{/if}}
+                                    {{else}}
+                                    None
+                                    {{/unless}}
+                                </div>
+
+                            </div>
+
+                            <div>
+                                <div class="item-box-border animon-hit-points">
+                                    <h4 class="title">{{localize "animon.animon.hp"}}</h4>
+                                    <input type="number" name="system.wounds.value"
+                                        value="{{actor.system.wounds.value}}">
+                                    <br>{{actor.system.wounds.max}}
+                                </div>
+
+                                <div class="item-box-border animon-damage">
+                                    <h4 class="title">{{localize "animon.animon.damage"}}</h4>
+                                    {{#if (eq actor.system.stage "2")}}
+                                    {{actor.system.basic.damage}}
+                                    {{/if}}
+                                    {{#if (eq actor.system.stage "1")}}
+                                    {{actor.system.fledgling.damage}}
+                                    {{/if}}
+                                    {{#if (eq actor.system.stage "3")}}
+                                    {{actor.system.super.damage}}
+                                    {{/if}}
+                                    {{#if (eq actor.system.stage "4")}}
+                                    {{actor.system.ultra.damage}}
+                                    {{/if}}
+                                    {{#if (eq actor.system.stage "5")}}
+                                    {{actor.system.giga.damage}}
+                                    {{/if}}
+                                </div>
+
+                                <div class="item-box-border animon-dodge">
+                                    <div class="animon-dodge-title title">
+                                        <h4>{{localize "animon.animon.dodge"}}</h4>
+                                        <a title='{{localize "animon.button.rollDodge"}}' class="roll-stat"
+                                            data-stat='{{localize "animon.animon.dodge"}}'
+                                            data-value="{{actor.system.basic.dodge}}">
+                                            <i class="fas fa-dice"></i>
+                                        </a>
+                                    </div>
+                                    {{#if (eq actor.system.stage "2")}}
+                                    {{actor.system.basic.dodge}}
+                                    {{/if}}
+                                    {{#if (eq actor.system.stage "1")}}
+                                    {{actor.system.fledgling.dodge}}
+                                    {{/if}}
+                                    {{#if (eq actor.system.stage "3")}}
+                                    {{actor.system.super.dodge}}
+                                    {{/if}}
+                                    {{#if (eq actor.system.stage "4")}}
+                                    {{actor.system.ultra.dodge}}
+                                    {{/if}}
+                                    {{#if (eq actor.system.stage "5")}}
+                                    {{actor.system.giga.dodge}}
+                                    {{/if}}
+                                </div>
+
+                                <div class="item-box-border animon-initiative">
+                                    <div class="animon-initiative-title title">
+                                        <h4>{{localize "animon.animon.initiative"}}</h4>
+                                        <a title='{{localize "animon.button.rollInitiative"}}' class="roll-stat"
+                                            data-stat='{{localize "animon.animon.initiative"}}'
+                                            data-value="{{actor.system.basic.initiative}}">
+                                            <i class="fas fa-dice"></i>
+                                        </a>
+                                    </div>
+                                    {{#if (eq actor.system.stage "2")}}
+                                    {{actor.system.basic.initiative}}
+                                    {{/if}}
+                                    {{#if (eq actor.system.stage "1")}}
+                                    {{actor.system.fledgling.initiative}}
+                                    {{/if}}
+                                    {{#if (eq actor.system.stage "3")}}
+                                    {{actor.system.super.initiative}}
+                                    {{/if}}
+                                    {{#if (eq actor.system.stage "4")}}
+                                    {{actor.system.ultra.initiative}}
+                                    {{/if}}
+                                    {{#if (eq actor.system.stage "5")}}
+                                    {{actor.system.giga.initiative}}
+                                    {{/if}}
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div>
+                        <div class="item-box-border nature">
+                            <h3>{{localize "animon.animon.nature"}}:</h3>
+                            <p>{{actor.system.nature}}</p>
+                        </div>
+                        <div class="class-element">
+                            <div class="item-box-border classification">
+                                <h3>{{localize "animon.animon.classification"}}:</h3>
+                                {{#if (eq actor.system.stage "2")}}
+                                <p>{{actor.system.basic.classification}}</p>
+                                {{/if}}
+                                {{#if (eq actor.system.stage "1")}}
+                                <p>{{actor.system.fledgling.classification}}</p>
+                                {{/if}}
+                                {{#if (eq actor.system.stage "3")}}
+                                <p>{{actor.system.super.classification}}</p>
+                                {{/if}}
+                                {{#if (eq actor.system.stage "4")}}
+                                <p>{{actor.system.ultra.classification}}</p>
+                                {{/if}}
+                                {{#if (eq actor.system.stage "5")}}
+                                <p>{{actor.system.giga.classification}}</p>
+                                {{/if}}
+                            </div>
+                            <div class="item-box-border element">
+                                <h3>{{localize "animon.animon.element"}}:</h3>
+                                {{#if (eq actor.system.stage "2")}}
+                                <p>{{actor.system.basic.element}}</p>
+                                {{/if}}
+                                {{#if (eq actor.system.stage "1")}}
+                                <p>{{actor.system.fledgling.element}}</p>
+                                {{/if}}
+                                {{#if (eq actor.system.stage "3")}}
+                                <p>{{actor.system.super.element}}</p>
+                                {{/if}}
+                                {{#if (eq actor.system.stage "4")}}
+                                <p>{{actor.system.ultra.element}}</p>
+                                {{/if}}
+                                {{#if (eq actor.system.stage "5")}}
+                                <p>{{actor.system.giga.element}}</p>
+                                {{/if}}
+                            </div>
+                        </div>
+                        {{#unless (eq actor.system.stage "1")}}
+                        <div class="item-box-border">
+                            <h4 class="signature-attack-main">{{localize "animon.animon.signatureAttack"}}</h4>
+                            {{> "systems/animon/templates/partials/signature-attack-display.hbs" stage="2"
+                            currentStage=actor.system.stage}}
+                            {{> "systems/animon/templates/partials/signature-attack-display.hbs" stage="3"
+                            currentStage=actor.system.stage}}
+                            {{> "systems/animon/templates/partials/signature-attack-display.hbs" stage="4"
+                            currentStage=actor.system.stage}}
+                            {{> "systems/animon/templates/partials/signature-attack-display.hbs" stage="5"
+                            currentStage=actor.system.stage}}
+                        </div>
+                        <div class="item-box-border">
+                            <div class="quality-main-title">
+                                <h4>{{localize "animon.animon.quality"}}</h4>
+                                <h4>{{localize "animon.animon.rank"}}</h4>
+                            </div>
+                            <div class="animon-qualities-list">
+                                {{> "systems/animon/templates/partials/quality-display.hbs" stage="2"
+                                currentStage=actor.system.stage}}
+                                {{> "systems/animon/templates/partials/quality-display.hbs" stage="3"
+                                currentStage=actor.system.stage}}
+                                {{> "systems/animon/templates/partials/quality-display.hbs" stage="4"
+                                currentStage=actor.system.stage}}
+                                {{> "systems/animon/templates/partials/quality-display.hbs" stage="5"
+                                currentStage=actor.system.stage}}
+                            </div>
+                        </div>
+                        {{/unless}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab edit" data-group="primary" data-tab="stages">
+            {{!-- Animon Fledgling Form --}}
+            <div class="stage-box-border">
+                <div class=" animon-info-input animon-stats">
+                    <div>
+                        <div class="item-box-border animon-title">
+                            <h3>{{localize "animon.animon.stages.fledgling"}}</h3>
+                        </div>
+                        <div class="item-box-border text-centered">
+                            <h3 class="title">{{localize "animon.animon.stats"}}</h3>
+                            <h4>{{localize "animon.animon.heart"}}</h4>
+                            <input type="number" class="update-hit-points" name="system.fledgling.stats.heart"
+                                value="{{actor.system.fledgling.stats.heart}}" data-stage="1">
+                            <h4>{{localize "animon.animon.power"}}</h4>
+                            <input type="number" class="update-damage" name="system.fledgling.stats.power"
+                                value="{{actor.system.fledgling.stats.power}}" data-stage="1">
+                            <h4>{{localize "animon.animon.agility"}}</h4>
+                            <input type="number" class="update-dodge" name="system.fledgling.stats.agility"
+                                value="{{actor.system.fledgling.stats.agility}}" data-stage="1">
+                            <h4>{{localize "animon.animon.brains"}}</h4>
+                            <input type="number" class="update-initiative" name="system.fledgling.stats.brains"
+                                value="{{actor.system.fledgling.stats.brains}}" data-stage="1">
+                        </div>
+                    </div>
+                    <div class="text-centered">
+                        <div class="item-box-border">
+                            <h4 class="title">{{localize "animon.animon.hp"}}</h4>
+                            <input type="number" name="system.fledgling.wounds.max"
+                                value="{{actor.system.fledgling.wounds.max}}">
+                        </div>
+                        <div class="item-box-border">
+                            <h4 class="title">{{localize "animon.animon.damage"}}</h4>
+                            <input type="number" name="system.fledgling.damage"
+                                value="{{actor.system.fledgling.damage}}">
+                        </div>
+                        <div class="item-box-border">
+                            <h4 class="title">{{localize "animon.animon.dodge"}}</h4>
+                            <input type="number" name="system.fledgling.dodge" value="{{actor.system.fledgling.dodge}}">
+                        </div>
+                        <div class="item-box-border">
+                            <h4 class="title">{{localize "animon.animon.initiative"}}</h4>
+                            <input type="number" name="system.fledgling.initiative"
+                                value="{{actor.system.fledgling.initiative}}">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="item-box-border animon-stage-name">
+                            <h3>{{localize "animon.animon.name"}}:</h3>
+                            <input type="text" name="system.fledgling.name" value="{{actor.system.fledgling.name}}">
+                        </div>
+                        <div class="class-element">
+                            <div class="item-box-border classification">
+                                <h3>{{localize "animon.animon.classification"}}:</h3>
+                                <input type="text" name="system.fledgling.classification"
+                                    value="{{actor.system.fledgling.classification}}">
+                            </div>
+                            <div class="item-box-border element">
+                                <h3>{{localize "animon.animon.element"}}:</h3>
+                                <input type="text" name="system.fledgling.element"
+                                    value="{{actor.system.fledgling.element}}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{!-- Animon Basic Form --}}
+            <div class="stage-box-border">
+                <div class="animon-info-input animon-stats">
+                    <div>
+                        <div class="item-box-border animon-title">
+                            <h3>{{localize "animon.animon.stages.basic"}}</h3>
+                        </div>
+                        <div class="item-box-border text-centered">
+                            <h3 class="title">{{localize "animon.animon.stats"}}</h3>
+                            <h4>{{localize "animon.animon.heart"}}</h4>
+                            <input type="number" class="update-hit-points" name="system.basic.stats.heart"
+                                value="{{actor.system.basic.stats.heart}}" data-stage="2">
+                            <h4>{{localize "animon.animon.power"}}</h4>
+                            <input type="number" class="update-damage" name="system.basic.stats.power"
+                                value="{{actor.system.basic.stats.power}}" data-stage="2">
+                            <h4>{{localize "animon.animon.agility"}}</h4>
+                            <input type="number" class="update-dodge" name="system.basic.stats.agility"
+                                value="{{actor.system.basic.stats.agility}}" data-stage="2">
+                            <h4>{{localize "animon.animon.brains"}}</h4>
+                            <input type="number" class="update-initiative" name="system.basic.stats.brains"
+                                value="{{actor.system.basic.stats.brains}}" data-stage="2">
+                        </div>
+                    </div>
+                    <div class="text-centered">
+                        <div class="item-box-border">
+                            <h4 class="title">{{localize "animon.animon.hp"}}</h4>
+                            <input type="number" name="system.basic.wounds.max"
+                                value="{{actor.system.basic.wounds.max}}">
+                        </div>
+                        <div class="item-box-border">
+                            <h4 class="title">{{localize "animon.animon.damage"}}</h4>
+                            <input type="number" name="system.basic.damage" value="{{actor.system.basic.damage}}">
+                        </div>
+                        <div class="item-box-border">
+                            <h4 class="title">{{localize "animon.animon.dodge"}}</h4>
+                            <input type="number" name="system.basic.dodge" value="{{actor.system.basic.dodge}}">
+                        </div>
+                        <div class="item-box-border">
+                            <h4 class="title">{{localize "animon.animon.initiative"}}</h4>
+                            <input type="number" name="system.basic.initiative"
+                                value="{{actor.system.basic.initiative}}">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="item-box-border animon-stage-name">
+                            <h3>{{localize "animon.animon.name"}}:</h3>
+                            <input type="text" name="system.basic.name" value="{{actor.system.basic.name}}">
+                        </div>
+                        <div class="item-box-border nature">
+                            <h3>{{localize "animon.animon.nature"}}:</h3>
+                            <input type="text" name="system.nature" value="{{actor.system.nature}}">
+                        </div>
+                        <div class="class-element">
+                            <div class="item-box-border classification">
+                                <h3>{{localize "animon.animon.classification"}}:</h3>
+                                <input type="text" name="system.basic.classification"
+                                    value="{{actor.system.basic.classification}}">
+                            </div>
+                            <div class="item-box-border element">
+                                <h3>{{localize "animon.animon.element"}}:</h3>
+                                <input type="text" name="system.basic.element" value="{{actor.system.basic.element}}">
+                            </div>
+                        </div>
+                        <div class="item-box-border">
+                            <div class="signature-attack-title">
+                                <h4 class="signature-attack-main">{{localize "animon.animon.signatureAttack"}}</h4>
+                                <a title='{{localize "animon.button.addSignatureAttack"}}' class="item-create"
+                                    data-type="signatureAttack" data-stage="2">
+                                    <i class="fas fa-plus"></i>
+                                </a>
+                            </div>
+                            {{> "systems/animon/templates/partials/signature-attack-display.hbs" stage="2"
+                            currentStage=2}}
+                        </div>
+                        <div class="item-box-border">
+                            <div class="quality-main-title">
+                                <h4>{{localize "animon.animon.quality"}}</h4>
+                                <h4>{{localize "animon.animon.rank"}}</h4>
+                                <a title='{{localize "animon.button.addQuality"}}' class="item-create"
+                                    data-type="quality" data-stage="2">
+                                    <i class="fas fa-plus"></i>
+                                </a>
+                            </div>
+                            <div class="animon-qualities-list">
+                                {{> "systems/animon/templates/partials/quality-display.hbs" stage="2" currentStage=2}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{!-- Animon Super Form --}}
+            <div class="stage-box-border">
+                <div class="animon-info-input animon-stats">
+                    <div>
+                        <div class="item-box-border animon-title">
+                            <h3>{{localize "animon.animon.stages.super"}}</h3>
+                        </div>
+                        <div class="item-box-border text-centered">
+                            <h3 class="title">{{localize "animon.animon.stats"}}</h3>
+                            <h4>{{localize "animon.animon.heart"}}</h4>
+                            <input type="number" class="update-hit-points" name="system.super.stats.heart"
+                                value="{{actor.system.super.stats.heart}}" data-stage="3">
+                            <h4>{{localize "animon.animon.power"}}</h4>
+                            <input type="number" class="update-damage" name="system.super.stats.power"
+                                value="{{actor.system.super.stats.power}}" data-stage="3">
+                            <h4>{{localize "animon.animon.agility"}}</h4>
+                            <input type="number" class="update-dodge" name="system.super.stats.agility"
+                                value="{{actor.system.super.stats.agility}}" data-stage="3">
+                            <h4>{{localize "animon.animon.brains"}}</h4>
+                            <input type="number" class="update-initiative" name="system.super.stats.brains"
+                                value="{{actor.system.super.stats.brains}}" data-stage="3">
+                        </div>
+                    </div>
+                    <div class="text-centered">
+                        <div class="item-box-border">
+                            <h4 class="title">{{localize "animon.animon.hp"}}</h4>
+                            <input type="number" name="system.super.wounds.max"
+                                value="{{actor.system.super.wounds.max}}">
+                        </div>
+                        <div class="item-box-border">
+                            <h4 class="title">{{localize "animon.animon.damage"}}</h4>
+                            <input type="number" name="system.super.damage" value="{{actor.system.super.damage}}">
+                        </div>
+                        <div class="item-box-border">
+                            <h4 class="title">{{localize "animon.animon.dodge"}}</h4>
+                            <input type="number" name="system.super.dodge" value="{{actor.system.super.dodge}}">
+                        </div>
+                        <div class="item-box-border">
+                            <h4 class="title">{{localize "animon.animon.initiative"}}</h4>
+                            <input type="number" name="system.super.initiative"
+                                value="{{actor.system.super.initiative}}">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="item-box-border animon-stage-name">
+                            <h3>{{localize "animon.animon.name"}}:</h3>
+                            <input type="text" name="system.super.name" value="{{actor.system.super.name}}">
+                        </div>
+                        <div class="class-element">
+                            <div class="item-box-border classification">
+                                <h3>{{localize "animon.animon.classification"}}:</h3>
+                                <input type="text" name="system.super.classification"
+                                    value="{{actor.system.super.classification}}">
+                            </div>
+                            <div class="item-box-border element">
+                                <h3>{{localize "animon.animon.element"}}:</h3>
+                                <input type="text" name="system.super.element" value="{{actor.system.super.element}}">
+                            </div>
+                        </div>
+                        <div class="item-box-border">
+                            <div class="signature-attack-title">
+                                <h4 class="signature-attack-main">{{localize "animon.animon.signatureAttack"}}</h4>
+                                <a title='{{localize "animon.button.addSignatureAttack"}}' class="item-create"
+                                    data-type="signatureAttack" data-stage="3">
+                                    <i class="fas fa-plus"></i>
+                                </a>
+                            </div>
+                            {{> "systems/animon/templates/partials/signature-attack-display.hbs" stage="3"
+                            currentStage=3}}
+                        </div>
+                        <div class="item-box-border">
+                            <div class="quality-main-title">
+                                <h4>{{localize "animon.animon.quality"}}</h4>
+                                <h4>{{localize "animon.animon.rank"}}</h4>
+                                <a title='{{localize "animon.button.addQuality"}}' class="item-create"
+                                    data-type="quality" data-stage="3">
+                                    <i class="fas fa-plus"></i>
+                                </a>
+                            </div>
+                            <div class="animon-qualities-list">
+                                {{> "systems/animon/templates/partials/quality-display.hbs" stage="3" currentStage=3}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{!-- Animon Ultra Form --}}
+            <div class="stage-box-border">
+                <div class="animon-info-input animon-stats">
+                    <div>
+                        <div class="item-box-border animon-title">
+                            <h3>{{localize "animon.animon.stages.ultra"}}</h3>
+                        </div>
+                        <div class="item-box-border text-centered">
+                            <h3 class="title">{{localize "animon.animon.stats"}}</h3>
+                            <h4>{{localize "animon.animon.heart"}}</h4>
+                            <input type="number" class="update-hit-points" name="system.ultra.stats.heart"
+                                value="{{actor.system.ultra.stats.heart}}" data-stage="4">
+                            <h4>{{localize "animon.animon.power"}}</h4>
+                            <input type="number" class="update-damage" name="system.ultra.stats.power"
+                                value="{{actor.system.ultra.stats.power}}" data-stage="4">
+                            <h4>{{localize "animon.animon.agility"}}</h4>
+                            <input type="number" class="update-dodge" name="system.ultra.stats.agility"
+                                value="{{actor.system.ultra.stats.agility}}" data-stage="4">
+                            <h4>{{localize "animon.animon.brains"}}</h4>
+                            <input type="number" class="update-initiative" name="system.ultra.stats.brains"
+                                value="{{actor.system.ultra.stats.brains}}" data-stage="4">
+                        </div>
+                    </div>
+                    <div class="text-centered">
+                        <div class="item-box-border">
+                            <h4 class="title">{{localize "animon.animon.hp"}}</h4>
+                            <input type="number" name="system.ultra.wounds.max"
+                                value="{{actor.system.ultra.wounds.max}}">
+                        </div>
+                        <div class="item-box-border">
+                            <h4 class="title">{{localize "animon.animon.damage"}}</h4>
+                            <input type="number" name="system.ultra.damage" value="{{actor.system.ultra.damage}}">
+                        </div>
+                        <div class="item-box-border">
+                            <h4 class="title">{{localize "animon.animon.dodge"}}</h4>
+                            <input type="number" name="system.ultra.dodge" value="{{actor.system.ultra.dodge}}">
+                        </div>
+                        <div class="item-box-border">
+                            <h4 class="title">{{localize "animon.animon.initiative"}}</h4>
+                            <input type="number" name="system.ultra.initiative"
+                                value="{{actor.system.ultra.initiative}}">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="item-box-border animon-stage-name">
+                            <h3>{{localize "animon.animon.name"}}:</h3>
+                            <input type="text" name="system.ultra.name" value="{{actor.system.ultra.name}}">
+                        </div>
+                        <div class="class-element">
+                            <div class="item-box-border classification">
+                                <h3>{{localize "animon.animon.classification"}}:</h3>
+                                <input type="text" name="system.ultra.classification"
+                                    value="{{actor.system.ultra.classification}}">
+                            </div>
+                            <div class="item-box-border element">
+                                <h3>{{localize "animon.animon.element"}}:</h3>
+                                <input type="text" name="system.ultra.element" value="{{actor.system.ultra.element}}">
+                            </div>
+                        </div>
+                        <div class="item-box-border">
+                            <div class="signature-attack-title">
+                                <h4 class="signature-attack-main">{{localize "animon.animon.signatureAttack"}}</h4>
+                                <a title='{{localize "animon.button.addSignatureAttack"}}' class="item-create"
+                                    data-type="signatureAttack" data-stage="4">
+                                    <i class="fas fa-plus"></i>
+                                </a>
+                            </div>
+                            {{> "systems/animon/templates/partials/signature-attack-display.hbs" stage="4"
+                            currentStage=4}}
+                        </div>
+                        <div class="item-box-border">
+                            <div class="quality-main-title">
+                                <h4>{{localize "animon.animon.quality"}}</h4>
+                                <h4>{{localize "animon.animon.rank"}}</h4>
+                                <a title='{{localize "animon.button.addQuality"}}' class="item-create"
+                                    data-type="quality" data-stage="4">
+                                    <i class="fas fa-plus"></i>
+                                </a>
+                            </div>
+                            <div class="animon-qualities-list">
+                                {{> "systems/animon/templates/partials/quality-display.hbs" stage="4" currentStage=4}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{!-- Animon Giga Form --}}
+            <div class="stage-box-border">
+                <div class="animon-info-input animon-stats">
+                    <div>
+                        <div class="item-box-border animon-title">
+                            <h3>{{localize "animon.animon.stages.giga"}}</h3>
+                        </div>
+                        <div class="item-box-border">
+                            <h3 class="title">{{localize "animon.animon.stats"}}</h3>
+                            <h4>{{localize "animon.animon.heart"}}</h4>
+                            <input type="number" class="update-hit-points" name="system.giga.stats.heart"
+                                value="{{actor.system.giga.stats.heart}}" data-stage="5">
+                            <h4>{{localize "animon.animon.power"}}</h4>
+                            <input type="number" class="update-damage" name="system.giga.stats.power"
+                                value="{{actor.system.giga.stats.power}}" data-stage="5">
+                            <h4>{{localize "animon.animon.agility"}}</h4>
+                            <input type="number" class="update-dodge" name="system.giga.stats.agility"
+                                value="{{actor.system.giga.stats.agility}}" data-stage="5">
+                            <h4>{{localize "animon.animon.brains"}}</h4>
+                            <input type="number" class="update-initiative" name="system.giga.stats.brains"
+                                value="{{actor.system.giga.stats.brains}}" data-stage="5">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="item-box-border">
+                            <h4 class="title">{{localize "animon.animon.hp"}}</h4>
+                            <input type="number" name="system.giga.wounds.max" value="{{actor.system.giga.wounds.max}}">
+                        </div>
+                        <div class="item-box-border">
+                            <h4 class="title">{{localize "animon.animon.damage"}}</h4>
+                            <input type="number" name="system.giga.damage" value="{{actor.system.giga.damage}}">
+                        </div>
+                        <div class="item-box-border">
+                            <h4 class="title">{{localize "animon.animon.dodge"}}</h4>
+                            <input type="number" name="system.giga.dodge" value="{{actor.system.giga.dodge}}">
+                        </div>
+                        <div class="item-box-border">
+                            <h4 class="title">{{localize "animon.animon.initiative"}}</h4>
+                            <input type="number" name="system.giga.initiative" value="{{actor.system.giga.initiative}}">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="item-box-border animon-stage-name">
+                            <h3>{{localize "animon.animon.name"}}:</h3>
+                            <input type="text" name="system.giga.name" value="{{actor.system.giga.name}}">
+                        </div>
+                        <div class="class-element">
+                            <div class="item-box-border classification">
+                                <h3>{{localize "animon.animon.classification"}}:</h3>
+                                <input type="text" name="system.giga.classification"
+                                    value="{{actor.system.giga.classification}}">
+                            </div>
+                            <div class="item-box-border element">
+                                <h3>{{localize "animon.animon.element"}}:</h3>
+                                <input type="text" name="system.giga.element" value="{{actor.system.giga.element}}">
+                            </div>
+                        </div>
+                        <div class="item-box-border">
+                            <div class="signature-attack-title">
+                                <h4 class="signature-attack-main">{{localize "animon.animon.signatureAttack"}}</h4>
+                                <a title='{{localize "animon.button.addSignatureAttack"}}' class="item-create"
+                                    data-type="signatureAttack" data-stage="5">
+                                    <i class="fas fa-plus"></i>
+                                </a>
+                            </div>
+                            {{> "systems/animon/templates/partials/signature-attack-display.hbs" stage="5"
+                            currentStage=5}}
+                        </div>
+                        <div class="item-box-border">
+                            <div class="quality-main-title">
+                                <h4>{{localize "animon.animon.quality"}}</h4>
+                                <h4>{{localize "animon.animon.rank"}}</h4>
+                                <a title='{{localize "animon.button.addQuality"}}' class="item-create"
+                                    data-type="quality" data-stage="5">
+                                    <i class="fas fa-plus"></i>
+                                </a>
+                            </div>
+                            <div class="animon-qualities-list">
+                                {{> "systems/animon/templates/partials/quality-display.hbs" stage="5" currentStage=5}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab advancement" data-group="primary" data-tab="advancement">
+            <div class="stage-box-border">
+                <div class="advancement">
+                    {{localize "animon.animon.maxHP"}}
+                    <input type="checkbox" class="advance-hit-points" name="system.advancement.maxHP1" {{checked
+                        actor.system.advancement.maxHP1}} data-dtype="boolean" />
+                    <input type="checkbox" class="advance-hit-points" name="system.advancement.maxHP2" {{checked
+                        actor.system.advancement.maxHP2}} data-dtype="boolean" />
+                </div>
+                <div class="advancement">
+                    {{localize "animon.animon.damage"}}
+                    <input type="checkbox" class="advance-damage" name="system.advancement.damage1" {{checked
+                        actor.system.advancement.damage1}} data-dtype="boolean" />
+                    <input type="checkbox" class="advance-damage" name="system.advancement.damage2" {{checked
+                        actor.system.advancement.damage2}} data-dtype="boolean" />
+                </div>
+                <div class="advancement">
+                    {{localize "animon.animon.dodge"}}
+                    <input type="checkbox" class="advance-dodge" name="system.advancement.dodge1" {{checked
+                        actor.system.advancement.dodge1}} data-dtype="boolean" />
+                    <input type="checkbox" class="advance-dodge" name="system.advancement.dodge2" {{checked
+                        actor.system.advancement.dodge2}} data-dtype="boolean" />
+                </div>
+                <div class="advancement">
+                    {{localize "animon.animon.initiative"}}
+                    <input type="checkbox" class="advance-intitiative" name="system.advancement.initiative1" {{checked
+                        actor.system.advancement.initiative1}} data-dtype="boolean" />
+                    <input type="checkbox" class="advance-intitiative" name="system.advancement.initiative2" {{checked
+                        actor.system.advancement.initiative2}} data-dtype="boolean" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+</form>

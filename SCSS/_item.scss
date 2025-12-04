@@ -1,0 +1,70 @@
+.animon.sheet.item {
+
+    .signatureAttack-item,
+    .quality-item,
+    .talent-item {
+
+        .signature-attack-border,
+        .quality-border,
+        .talent-border {
+            background-color: $white;
+            border: 1px solid $black;
+            border-radius: 3px;
+            padding: 4px;
+            margin: 2px;
+        }
+
+        h4 {
+            margin: auto 0 auto 0;
+        }
+
+        .sa-rank-element {
+            display: grid;
+            grid-template-columns: 30% 70%;
+        }
+
+        .sainput,
+        .qinput,
+        .tinput {
+            display: grid;
+            grid-template-columns: 60px auto;
+            padding: 2px 0 2px 0;
+        }
+
+        .sa-border:not(:last-child),
+        .q-border:not(:last-child),
+        .t-border:not(:last-child) {
+            border-bottom: 1px dotted $black;
+        }
+    }
+
+    .editor {
+        height: 6.25rem;
+        background: rgba(255, 255, 255, 0.2);
+        border: 1px solid darkgray;
+        border-radius: 3px;
+
+        .tox-tbtn[title="Insert/edit link"],
+        .tox-tbtn[title="Horizontal line"] {
+            display: none;
+        }
+
+        p {
+            margin: 0.25rem;
+        }
+
+        .tox .tox-tbtn {
+            transform: scale(0.9);
+            height: 18px;
+            width: auto;
+        }
+
+        .tox.tox-tinymce .tox-tbtn[title="Formats"] {
+            width: 80px;
+        }
+
+        .tox .tox-toolbar__group {
+            padding: 0;
+        }
+    }
+}

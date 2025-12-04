@@ -1,0 +1,849 @@
+.animon.sheet.actor h3 {
+  border: none;
+}
+
+.animon.sheet.actor .center {
+  text-align: center;
+}
+
+.animon.sheet.actor .item-box-border {
+  border: 3px solid #000000;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 2px;
+  background-color: #FFFFFF;
+}
+
+.animon.sheet.actor .stage-box-border {
+  border: 3px solid #878786;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 2px 2px 10px 2px;
+  background-color: #c6c6c6;
+}
+
+.animon.sheet.actor .title-box-border {
+  border: 3px solid #000000;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 2px 2px 10px 2px;
+  background-color: #FFFFFF;
+}
+
+.animon.sheet.actor .animon-info {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% 60%;
+      grid-template-columns: 40% 60%;
+}
+
+.animon.sheet.actor .animon-info .animon-info-stats {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+}
+
+.animon.sheet.actor .animon-title h3 {
+  margin: 0;
+}
+
+.animon.sheet.actor .animon-info input[type="number"],
+.animon.sheet.actor .animon-info-input input[type="number"] {
+  padding: 4px;
+  height: auto;
+  text-align: center;
+}
+
+.animon.sheet.actor .animon-info .title,
+.animon.sheet.actor .animon-info-input .title {
+  border-bottom: 1px solid #000000;
+}
+
+.animon.sheet.actor .animon-info-input {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% 20% 60%;
+      grid-template-columns: 20% 20% 60%;
+}
+
+.animon.sheet.actor .animon-stats {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.animon.sheet.actor .text-centered {
+  text-align: center;
+}
+
+.animon.sheet.actor .animon-heart,
+.animon.sheet.actor .animon-power,
+.animon.sheet.actor .animon-agility,
+.animon.sheet.actor .animon-brains {
+  padding: 4px;
+}
+
+.animon.sheet.actor .animon-heart-title,
+.animon.sheet.actor .animon-power-title,
+.animon.sheet.actor .animon-agility-title,
+.animon.sheet.actor .animon-brains-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.animon.sheet.actor .animon-heart-title a,
+.animon.sheet.actor .animon-power-title a,
+.animon.sheet.actor .animon-agility-title a,
+.animon.sheet.actor .animon-brains-title a {
+  margin-left: 2px;
+}
+
+.animon.sheet.actor .animon-heart-title h4,
+.animon.sheet.actor .animon-power-title h4,
+.animon.sheet.actor .animon-agility-title h4,
+.animon.sheet.actor .animon-brains-title h4 {
+  margin-left: 19.5px;
+}
+
+.animon.sheet.actor .animon-heart,
+.animon.sheet.actor .animon-power,
+.animon.sheet.actor .animon-agility {
+  border-bottom: 1px dotted #000000;
+}
+
+.animon.sheet.actor .animon-hit-points,
+.animon.sheet.actor .animon-damage,
+.animon.sheet.actor .animon-dodge,
+.animon.sheet.actor .animon-initiative {
+  text-align: center;
+}
+
+.animon.sheet.actor .animon-hit-points-title,
+.animon.sheet.actor .animon-damage-title,
+.animon.sheet.actor .animon-dodge-title,
+.animon.sheet.actor .animon-initiative-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.animon.sheet.actor .animon-hit-points-title a,
+.animon.sheet.actor .animon-damage-title a,
+.animon.sheet.actor .animon-dodge-title a,
+.animon.sheet.actor .animon-initiative-title a {
+  margin-left: 2px;
+}
+
+.animon.sheet.actor .animon-hit-points-title h4,
+.animon.sheet.actor .animon-damage-title h4,
+.animon.sheet.actor .animon-dodge-title h4,
+.animon.sheet.actor .animon-initiative-title h4 {
+  margin: 0 0 0 19.5px;
+}
+
+.animon.sheet.actor .animon-damage,
+.animon.sheet.actor .animon-dodge,
+.animon.sheet.actor .animon-initiative {
+  padding: 20px 10px;
+}
+
+.animon.sheet.actor .animon-hit-points input {
+  max-width: 50%;
+  border: none;
+  border-bottom: 1px solid #000000;
+  border-radius: 0;
+  margin: 4px;
+  background-color: #add8e6;
+}
+
+.animon.sheet.actor .quality-main-title,
+.animon.sheet.actor .talent-main-title {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 72% 18% 10%;
+      grid-template-columns: 72% 18% 10%;
+  border-bottom: 1px solid #000000;
+}
+
+.animon.sheet.actor .quality-main-title h4,
+.animon.sheet.actor .talent-main-title h4 {
+  margin: 0;
+  border-right: 1px solid #000000;
+}
+
+.animon.sheet.actor .quality-main-title a,
+.animon.sheet.actor .talent-main-title a {
+  text-align: center;
+}
+
+.animon.sheet.actor .quality-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.animon.sheet.actor .quality-title a {
+  margin-left: auto;
+}
+
+.animon.sheet.actor .signature-attack-title {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 14px;
+      grid-template-columns: auto 14px;
+}
+
+.animon.sheet.actor .signature-attack-title h4 {
+  padding-left: 14px;
+}
+
+.animon.sheet.actor .signature-attack-title i {
+  border-bottom: 1px #000000 solid;
+  padding-bottom: 2px;
+}
+
+.animon.sheet.actor .qualities {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 75% 25%;
+      grid-template-columns: 75% 25%;
+}
+
+.animon.sheet.actor .quality-item,
+.animon.sheet.actor .talent-item,
+.animon.sheet.actor .relationship-item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 90% 10%;
+      grid-template-columns: 90% 10%;
+}
+
+.animon.sheet.actor .relationship-item {
+  border-bottom: dashed 1px #000000;
+  margin-bottom: 2px;
+}
+
+.animon.sheet.actor .relationship-item p {
+  margin: 0 0 2px 0;
+}
+
+.animon.sheet.actor .relationships-title {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 90% 10%;
+      grid-template-columns: 90% 10%;
+  border-bottom: solid 1px #000000;
+  margin-bottom: 4px;
+}
+
+.animon.sheet.actor .relationships-title h4 {
+  margin: 0;
+}
+
+.animon.sheet.actor .relationships-title a {
+  text-align: center;
+}
+
+.animon.sheet.actor .signatureAttack-selected .signature-attack-border {
+  background-color: #90ee90;
+}
+
+.animon.sheet.actor .quality-selected,
+.animon.sheet.actor .talent-selected {
+  background-color: #90ee90;
+}
+
+.animon.sheet.actor .animon-qualities-list .quality-item:not(:last-child),
+.animon.sheet.actor .animon-qualities-list .talent-item:not(:last-child),
+.animon.sheet.actor .child-talents-list .quality-item:not(:last-child),
+.animon.sheet.actor .child-talents-list .talent-item:not(:last-child) {
+  border-bottom: 1px dotted #000000;
+}
+
+.animon.sheet.actor .animon-qualities-list .quality-item-display,
+.animon.sheet.actor .animon-qualities-list .talent-item-display,
+.animon.sheet.actor .child-talents-list .quality-item-display,
+.animon.sheet.actor .child-talents-list .talent-item-display {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 80% 20%;
+      grid-template-columns: 80% 20%;
+}
+
+.animon.sheet.actor .animon-qualities-list .quality-item-display div,
+.animon.sheet.actor .animon-qualities-list .talent-item-display div,
+.animon.sheet.actor .child-talents-list .quality-item-display div,
+.animon.sheet.actor .child-talents-list .talent-item-display div {
+  border-right: 1px solid #000000;
+}
+
+.animon.sheet.actor .animon-qualities-list .quality-item-display div:nth-child(2),
+.animon.sheet.actor .animon-qualities-list .talent-item-display div:nth-child(2),
+.animon.sheet.actor .child-talents-list .quality-item-display div:nth-child(2),
+.animon.sheet.actor .child-talents-list .talent-item-display div:nth-child(2) {
+  text-align: center;
+}
+
+.animon.sheet.actor .animon-qualities-list .quality-item-buttons,
+.animon.sheet.actor .animon-qualities-list .talent-item-buttons,
+.animon.sheet.actor .child-talents-list .quality-item-buttons,
+.animon.sheet.actor .child-talents-list .talent-item-buttons {
+  text-align: center;
+}
+
+.animon.sheet.actor .signature-attack-main {
+  text-align: center;
+  border-bottom: 1px solid #000000;
+}
+
+.animon.sheet.actor .signatureAttack-item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 90% 10%;
+      grid-template-columns: 90% 10%;
+}
+
+.animon.sheet.actor .signatureAttack-item h4 {
+  margin: auto 0 auto 0;
+}
+
+.animon.sheet.actor .signatureAttack-item .sa-rank-element {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 70%;
+      grid-template-columns: 30% 70%;
+}
+
+.animon.sheet.actor .signatureAttack-item .sainput {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 60px auto;
+      grid-template-columns: 60px auto;
+  padding: 2px 0 2px 0;
+}
+
+.animon.sheet.actor .signatureAttack-item .sa-border:not(:last-child) {
+  border-bottom: 1px dotted #000000;
+}
+
+.animon.sheet.actor .signatureAttack-item .signatureAttack-item-buttons {
+  margin: auto;
+}
+
+.animon.sheet.actor .signature-attack-border {
+  border: 1px solid #000000;
+  border-radius: 3px;
+  padding: 4px;
+  margin: 2px;
+}
+
+.animon.sheet.actor .classification,
+.animon.sheet.actor .element,
+.animon.sheet.actor .nature,
+.animon.sheet.actor .animon-stage-name,
+.animon.sheet.actor .kid-name,
+.animon.sheet.actor .virtue,
+.animon.sheet.actor .flaw,
+.animon.sheet.actor .desire,
+.animon.sheet.actor .special-item,
+.animon.sheet.actor .kid-type,
+.animon.sheet.actor .animon-stage-name,
+.animon.sheet.actor .animon-current-stage {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: max-content auto;
+      grid-template-columns: -webkit-max-content auto;
+      grid-template-columns: max-content auto;
+}
+
+.animon.sheet.actor .classification h3,
+.animon.sheet.actor .classification h4,
+.animon.sheet.actor .element h3,
+.animon.sheet.actor .element h4,
+.animon.sheet.actor .nature h3,
+.animon.sheet.actor .nature h4,
+.animon.sheet.actor .animon-stage-name h3,
+.animon.sheet.actor .animon-stage-name h4,
+.animon.sheet.actor .kid-name h3,
+.animon.sheet.actor .kid-name h4,
+.animon.sheet.actor .virtue h3,
+.animon.sheet.actor .virtue h4,
+.animon.sheet.actor .flaw h3,
+.animon.sheet.actor .flaw h4,
+.animon.sheet.actor .desire h3,
+.animon.sheet.actor .desire h4,
+.animon.sheet.actor .special-item h3,
+.animon.sheet.actor .special-item h4,
+.animon.sheet.actor .kid-type h3,
+.animon.sheet.actor .kid-type h4,
+.animon.sheet.actor .animon-stage-name h3,
+.animon.sheet.actor .animon-stage-name h4,
+.animon.sheet.actor .animon-current-stage h3,
+.animon.sheet.actor .animon-current-stage h4 {
+  margin: auto 0.5rem auto 0;
+}
+
+.animon.sheet.actor .classification p,
+.animon.sheet.actor .element p,
+.animon.sheet.actor .nature p,
+.animon.sheet.actor .animon-stage-name p,
+.animon.sheet.actor .kid-name p,
+.animon.sheet.actor .virtue p,
+.animon.sheet.actor .flaw p,
+.animon.sheet.actor .desire p,
+.animon.sheet.actor .special-item p,
+.animon.sheet.actor .kid-type p,
+.animon.sheet.actor .animon-stage-name p,
+.animon.sheet.actor .animon-current-stage p {
+  margin: auto 0 auto 0;
+}
+
+.animon.sheet.actor .animon-current-stage select {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.animon.sheet.actor .virtue-flaw,
+.animon.sheet.actor .desire-special {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+}
+
+.animon.sheet.actor .kid-top {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: max-content auto;
+      grid-template-columns: -webkit-max-content auto;
+      grid-template-columns: max-content auto;
+}
+
+.animon.sheet.actor .kid-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  vertical-align: middle;
+}
+
+.animon.sheet.actor .kid-title h3 {
+  margin: auto 1.5rem auto 1.5rem;
+}
+
+.animon.sheet.actor .class-element {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 55% 45%;
+      grid-template-columns: 55% 45%;
+}
+
+.animon.sheet.actor .child-stats {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+.animon.sheet.actor .child-stats .child-logic,
+.animon.sheet.actor .child-stats .child-reflex,
+.animon.sheet.actor .child-stats .child-spirit {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.animon.sheet.actor .child-stats .child-logic a,
+.animon.sheet.actor .child-stats .child-reflex a,
+.animon.sheet.actor .child-stats .child-spirit a {
+  margin-left: 2px;
+}
+
+.animon.sheet.actor .child-stats .child-logic h4,
+.animon.sheet.actor .child-stats .child-reflex h4,
+.animon.sheet.actor .child-stats .child-spirit h4 {
+  margin-left: 19.5px;
+}
+
+.animon.sheet.actor .child-stats .child-logic-title,
+.animon.sheet.actor .child-stats .child-reflex-title,
+.animon.sheet.actor .child-stats .child-spirit-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.animon.sheet.actor .child-stats .child-logic,
+.animon.sheet.actor .child-stats .child-reflex {
+  border-right: 1px dotted #000000;
+}
+
+.animon.sheet.actor .child-stats input {
+  width: 40px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.animon.sheet.actor .stamina {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: max-content 1fr 26px 1fr;
+      grid-template-columns: -webkit-max-content 1fr 26px 1fr;
+      grid-template-columns: max-content 1fr 26px 1fr;
+}
+
+.animon.sheet.actor .stamina h4 {
+  margin: auto 10px auto 0;
+}
+
+.animon.sheet.actor .stamina input {
+  width: 80px;
+  text-align: center;
+}
+
+.animon.sheet.actor .stamina input:first-child {
+  margin-left: auto;
+}
+
+.animon.sheet.actor .stamina-line {
+  width: 36.6px;
+  border-bottom: 2px dashed #000000;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+.animon.sheet.actor .child-traits h3 {
+  text-align: center;
+  border-bottom: 1px solid #000000;
+}
+
+.animon.sheet.actor .kid-sheet {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.animon.sheet.actor .kid-type,
+.animon.sheet.actor .kid-stuff {
+  border-bottom: 1px solid #000000;
+  margin-bottom: 4px;
+}
+
+.animon.sheet.actor .kid-name,
+.animon.sheet.actor .virtue-flaw,
+.animon.sheet.actor .desire-special,
+.animon.sheet.actor .kid-type {
+  padding: 0px 0 4px 0px;
+}
+
+.animon.sheet.actor .harm-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #000000;
+}
+
+.animon.sheet.actor .harm-title h4 {
+  margin: auto 0;
+}
+
+.animon.sheet.actor .harm-title h4:nth-child(2) {
+  margin-left: auto;
+}
+
+.animon.sheet.actor .harm-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 4px;
+  padding-bottom: 2px;
+  border-bottom: 1px dotted #000000;
+}
+
+.animon.sheet.actor .harm-input h4 {
+  margin: auto 10px auto 0;
+}
+
+.animon.sheet.actor .bond {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.animon.sheet.actor .bond-points {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: max-content 1fr 26px 1fr;
+      grid-template-columns: -webkit-max-content 1fr 26px 1fr;
+      grid-template-columns: max-content 1fr 26px 1fr;
+}
+
+.animon.sheet.actor .bond-points h4 {
+  margin: auto 0 auto 0;
+  padding: 0 10px 0 0;
+  border-right: 1px black solid;
+}
+
+.animon.sheet.actor .bond-points input {
+  width: 30px;
+  text-align: center;
+}
+
+.animon.sheet.actor .bond-points input:nth-child(2) {
+  margin: auto 0 auto auto;
+}
+
+.animon.sheet.actor .bond-points input:nth-child(4) {
+  margin: auto auto auto 0;
+}
+
+.animon.sheet.actor .bond-points-line {
+  width: 42px;
+  border-bottom: 2px dashed #000000;
+  -webkit-transform: rotate(-49deg);
+          transform: rotate(-49deg);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+.animon.sheet.actor .bond-strain {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: max-content auto;
+      grid-template-columns: -webkit-max-content auto;
+      grid-template-columns: max-content auto;
+}
+
+.animon.sheet.actor .bond-strain h4 {
+  margin: auto 0 auto 0;
+  padding: 0 10px 0 0;
+  border-right: 1px black solid;
+}
+
+.animon.sheet.actor .bond-strain input {
+  width: 30px;
+  text-align: center;
+  margin: auto;
+}
+
+.animon.sheet.actor .bond-level {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: max-content auto;
+      grid-template-columns: -webkit-max-content auto;
+      grid-template-columns: max-content auto;
+}
+
+.animon.sheet.actor .bond-level h4 {
+  margin: auto 0 auto 0;
+  padding: 0 10px 0 0;
+  border-right: 1px black solid;
+}
+
+.animon.sheet.actor .bond-level input {
+  width: 30px;
+  text-align: center;
+  margin: auto;
+}
+
+.animon.sheet.actor .xp-bond-level {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: max-content auto;
+      grid-template-columns: -webkit-max-content auto;
+      grid-template-columns: max-content auto;
+}
+
+.animon.sheet.actor .xp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.animon.sheet.actor .xp h4 {
+  padding-right: 6px;
+  margin: auto 0;
+}
+
+.animon.sheet.actor .xp-points {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.animon.sheet.actor .set-xp {
+  margin: auto 0;
+}
+
+.animon.sheet.actor .xp-selected circle,
+.animon.sheet.actor .xp-unselected circle {
+  stroke: #000000;
+  stroke-width: 2;
+}
+
+.animon.sheet.actor .xp-unselected circle {
+  fill: #FFFFFF;
+}
+
+.animon.sheet.actor .xp-selected circle {
+  fill: #878786;
+}
+
+.animon.sheet.actor .editor {
+  height: 6.25rem;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid darkgray;
+  border-radius: 3px;
+}
+
+.animon.sheet.actor .editor .tox-tbtn[title="Insert/edit link"],
+.animon.sheet.actor .editor .tox-tbtn[title="Horizontal line"] {
+  display: none;
+}
+
+.animon.sheet.actor .editor p {
+  margin: 0.25rem;
+}
+
+.animon.sheet.actor .editor .tox .tox-tbtn {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  height: 18px;
+  width: auto;
+}
+
+.animon.sheet.actor .editor .tox.tox-tinymce .tox-tbtn[title="Formats"] {
+  width: 80px;
+}
+
+.animon.sheet.actor .editor .tox .tox-toolbar__group {
+  padding: 0;
+}
+
+.animon.sheet.item .signatureAttack-item .signature-attack-border,
+.animon.sheet.item .signatureAttack-item .quality-border,
+.animon.sheet.item .signatureAttack-item .talent-border,
+.animon.sheet.item .quality-item .signature-attack-border,
+.animon.sheet.item .quality-item .quality-border,
+.animon.sheet.item .quality-item .talent-border,
+.animon.sheet.item .talent-item .signature-attack-border,
+.animon.sheet.item .talent-item .quality-border,
+.animon.sheet.item .talent-item .talent-border {
+  background-color: #FFFFFF;
+  border: 1px solid #000000;
+  border-radius: 3px;
+  padding: 4px;
+  margin: 2px;
+}
+
+.animon.sheet.item .signatureAttack-item h4,
+.animon.sheet.item .quality-item h4,
+.animon.sheet.item .talent-item h4 {
+  margin: auto 0 auto 0;
+}
+
+.animon.sheet.item .signatureAttack-item .sa-rank-element,
+.animon.sheet.item .quality-item .sa-rank-element,
+.animon.sheet.item .talent-item .sa-rank-element {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 70%;
+      grid-template-columns: 30% 70%;
+}
+
+.animon.sheet.item .signatureAttack-item .sainput,
+.animon.sheet.item .signatureAttack-item .qinput,
+.animon.sheet.item .signatureAttack-item .tinput,
+.animon.sheet.item .quality-item .sainput,
+.animon.sheet.item .quality-item .qinput,
+.animon.sheet.item .quality-item .tinput,
+.animon.sheet.item .talent-item .sainput,
+.animon.sheet.item .talent-item .qinput,
+.animon.sheet.item .talent-item .tinput {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 60px auto;
+      grid-template-columns: 60px auto;
+  padding: 2px 0 2px 0;
+}
+
+.animon.sheet.item .signatureAttack-item .sa-border:not(:last-child),
+.animon.sheet.item .signatureAttack-item .q-border:not(:last-child),
+.animon.sheet.item .signatureAttack-item .t-border:not(:last-child),
+.animon.sheet.item .quality-item .sa-border:not(:last-child),
+.animon.sheet.item .quality-item .q-border:not(:last-child),
+.animon.sheet.item .quality-item .t-border:not(:last-child),
+.animon.sheet.item .talent-item .sa-border:not(:last-child),
+.animon.sheet.item .talent-item .q-border:not(:last-child),
+.animon.sheet.item .talent-item .t-border:not(:last-child) {
+  border-bottom: 1px dotted #000000;
+}
+
+.animon.sheet.item .editor {
+  height: 6.25rem;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid darkgray;
+  border-radius: 3px;
+}
+
+.animon.sheet.item .editor .tox-tbtn[title="Insert/edit link"],
+.animon.sheet.item .editor .tox-tbtn[title="Horizontal line"] {
+  display: none;
+}
+
+.animon.sheet.item .editor p {
+  margin: 0.25rem;
+}
+
+.animon.sheet.item .editor .tox .tox-tbtn {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  height: 18px;
+  width: auto;
+}
+
+.animon.sheet.item .editor .tox.tox-tinymce .tox-tbtn[title="Formats"] {
+  width: 80px;
+}
+
+.animon.sheet.item .editor .tox .tox-toolbar__group {
+  padding: 0;
+}
+
+.animon.chat .roll-dialogue {
+  margin-bottom: 10px;
+}
+
+.animon.chat .roll-dialogue .roll-dialogue-child {
+  margin: 4px 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100px auto;
+      grid-template-columns: 100px auto;
+}
+
+.animon.chat .roll-dialogue .roll-dialogue-child select {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.animon.chat .roll-dialogue .roll-dialogue-child label {
+  margin: auto 0;
+}
+/*# sourceMappingURL=animon.css.map */

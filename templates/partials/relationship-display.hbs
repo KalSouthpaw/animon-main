@@ -1,0 +1,25 @@
+<div class="item-box-border">
+    <div class="relationships-title">
+        <h4>{{localize "animon.child.relationships"}}:</h4>
+        <a title='{{localize "animon.button.addRelationship"}}' class="item-create" data-type="relationship"
+            data-stage=2>
+            <i class="fas fa-plus"></i>
+        </a>
+    </div>
+    {{#each actor.relationship as |relationship id|}}
+    <div class="relationship-item" data-item-id="{{relationship._id}}">
+        <div>
+            <h4>Relationship With: {{name}}</h4>
+            {{{system.description}}}
+        </div>
+        <div class="relationship-item-buttons">
+            <a title='{{localize "animon.button.editRelationship" }}' class="item-edit" data-type="relationship">
+                <i class="fas fa-edit"></i>
+            </a>
+            <a title='{{localize "animon.button.deleteRelationship" }}' class="item-delete" data-type="relationship">
+                <i class="fas fa-trash"></i>
+            </a>
+        </div>
+    </div>
+    {{/each}}
+</div>
