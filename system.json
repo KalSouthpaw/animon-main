@@ -1,5 +1,5 @@
 {
-    "name": "animon-main",
+    "id": "animon-main",
     "title": "Animon Story (Unofficial)",
     "description": "A system for playing Animon Story",
     "authors": [
@@ -26,8 +26,10 @@
             "path": "lang/en.json"
         }
     ],
-    "gridDistance": 5,
-    "gridUnits": "ft",
+    "grid": {
+        "distance": 5,
+        "units": "ft"
+    },
     "primaryTokenAttribute": "wounds",
     "initiative": "(@basic.initiative)d6cs>=4",
     "url": "https://github.com/KalSouthpaw/animon-main",
