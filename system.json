@@ -31,7 +31,6 @@
         "units": "ft"
     },
     "primaryTokenAttribute": "wounds",
-    "initiative": "(@basic.initiative)d6cs>=4",
     "url": "https://github.com/KalSouthpaw/animon-main",
     "manifest": "https://raw.githubusercontent.com/KalSouthpaw/animon-main/refs/heads/main/system.json",
     "download": "https://github.com/KalSouthpaw/animon-main/archive/refs/heads/main.zip"
